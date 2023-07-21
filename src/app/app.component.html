@@ -1,0 +1,44 @@
+<h1>Ejercicio 1</h1>
+<h4>{{ nombrePersona }} {{apellidoPersona}}</h4>
+<h5> {{propiedadNumero}} </h5>
+<!-- {{ }} Generar una interpolación  -->
+
+<button
+(click)= "renombrarPersona()"
+>Renombrar</button>
+
+
+<h4>Contador</h4>
+<p>{{ contador }}</p>
+
+<button
+(click)="clickContador()"
+>Sumar +1</button>
+
+<button
+(click)="clickContadorResta()"
+>Resta -1</button>
+
+<h3>For elementos</h3>
+<h5>Arreglo estatico</h5>
+<ul>
+  <li>{{ listaCanciones[0] }}</li>
+  <li>{{ listaCanciones[1] }}</li>
+  <li>{{ listaCanciones[2] }}</li>
+  <li>{{ listaCanciones[3] }}</li>
+  <li>{{ listaCanciones[4] }}</li>
+</ul>
+
+<h5>Arreglo dinamico</h5>
+<ul>
+  <li *ngFor="let nombreCancion of listaCanciones">
+    {{ nombreCancion }}
+  </li>
+</ul>
+
+<h3>Nombre - NgForm</h3>
+{{ nombreCompleto }}
+<input [(ngModel)] = "nombrePersona" type="text">
+
+
+
